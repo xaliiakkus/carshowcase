@@ -1,31 +1,35 @@
-"use client"
+'use client'
 import React from 'react'
 import CostomButton from './CostomButton'
 import Image from 'next/image'
-import CarsHeroBg from '../public/hero-bg.png'
-import CarsHero from '../public/hero.png'
 const Hero = () => {
     const handleScroll = () => {
-        console.log('clic')
+        console.log('click')
     }
     return (
-        <div className=' xs:w-full xl:w-[1920px] '>
-            <div className='flex-1 pt-36  padding-x'>
-                <h1 className='hero__title'>Find, book, or rent a carr -- and aesily!</h1>
+        <div className="hero">
+            <div className="flex-1 pt-36 padding-x">
+                <h1 className="hero__title">
+                    Find, book, rent a car—quick and super easy!
+                </h1>
+
+                <p className="hero__subtitle">
+                    Streamline your car rental experience with our effortless booking
+                    process.
+                </p>
+
+                <CostomButton
+                    title="Explore Cars"
+                    containerStyle="bg-primary-blue text-white rounded-full mt-10"
+                    handleClick={handleScroll}
+                />
             </div>
-            <p className='hero__subtitle xl:px-20   xs:px-20'>
-                We are a community of people who love to travel. We want to help you find the best car
-            </p>
-            <CostomButton
-                title="Let's Go"
-                containerStyle="bg-primary-blue text-white rounded-full m-10 mt-12 p-4 "
-                handleClick={() => { handleScroll }}
-            />
             <div className="hero__image-container">
                 <div className="hero__image">
-                    <Image src={CarsHero} className=' object-contain xl:w-[900px] float-right' alt='cars' />
-                    <div className="hero__image-overlay  xs:h-18" />
+                    <Image src="/hero.png" alt="hero" fill className="object-contain" />
                 </div>
+
+                <div className="hero__image-overlay" />
             </div>
         </div>
     )
