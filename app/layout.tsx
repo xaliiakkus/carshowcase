@@ -2,7 +2,7 @@ import "./globals.css";
 import NavBar from "../Components/Navbar";
 import Footer from "../Components/Footer";
 export const metadata = {
-  title: "Car Hub",
+  title: "Rente a Cars",
   description: "Discover world's best car showcase application",
 };
 
