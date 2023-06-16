@@ -1,28 +1,19 @@
-'use client'
-import './globals.css'
-import { Inter } from 'next/font/google'
-import Navbar from '@/Components/Navbar'
-import Footer from '@/Components/Footer'
-
-const inter = Inter({ subsets: ['latin'] })
-
+import "./globals.css";
+import NavBar from "../Components/Navbar";
+import Footer from "../Components/Footer";
 export const metadata = {
-  title: 'AA Renta a Car',
-  description: ' buy a ',
-}
+  title: "Car Hub",
+  description: "Discover world's best car showcase application",
+};
 
-export default function RootLayout({
-  children,
-}: {
-  children: React.ReactNode
-}) {
+export default function RootLayout({ children }: { children: React.ReactNode }) {
   return (
-    <html lang="en">
-      <body className="relative">
-        <Navbar />
+    <html lang='en'>
+      <body className='relative'>
+        <NavBar />
         {children}
         <Footer />
       </body>
     </html>
-  )
+  );
 }
